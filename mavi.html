@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Developer Date</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    
+    h1 {
+      font-size: 30px;
+      color: #333;
+    }
+    
+    button {
+      padding: 10px 20px;
+      font-size: 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hey there mavi, can u be mine?</h1>
+  <button id="startButton">Let's find out ml!</button>
+  
+  <script>
+    const phrases = [
+      "You must be the first walking angel.",
+      "does love mean yohi? cuz it led me here.",
+      "Are you a software update mavi? Because you make my heart skip a beat.",
+      "Ily.",
+      "Do you believe in love at first website?",
+      "Ilysmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm",
+
+    ];
+    
+    function getRandomPhrase() {
+      const randomIndex = Math.floor(Math.random() * phrases.length);
+      return phrases[randomIndex];
+    }
+    
+    function displayRandomPhrase() {
+      const phrase = getRandomPhrase();
+      const phraseElement = document.createElement("h1");
+      phraseElement.textContent = phrase;
+      document.body.appendChild(phraseElement);
+    }
+    
+    document.getElementById("startButton").addEventListener("click", function() {
+      this.style.display = "none";
+      displayRandomPhrase();
+    });
+  </script>
+</body>
+</html>
